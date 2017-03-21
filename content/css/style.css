@@ -577,7 +577,7 @@ nav.visualMenu a:nth-child(12){background: url(../img/site/visualmenu/animals.jp
 .visualMenu a:after {
 	display: inline-block;
 	content: '';
-	width: 0; height: 0;
+	width:0;height:0;
 	border-bottom: 205px solid black;
 	border-left: 205px solid transparent;
 	border-right: 205px solid transparent;
@@ -588,6 +588,18 @@ nav.visualMenu a:nth-child(12){background: url(../img/site/visualmenu/animals.jp
 
 .noWrap {
 	white-space: nowrap;
+}
+
+@media all and (max-width: 410px) {
+	nav.visualMenu a {
+		width: 320px;
+		height: 287px;
+	}
+	.visualMenu a:after{
+		border-bottom-width: 160px;
+		border-left-width: 160px;
+		border-right-width: 160px;
+	}
 }
 
 /* TAGS */
