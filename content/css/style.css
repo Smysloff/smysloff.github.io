@@ -131,6 +131,11 @@ article {
 	width: 50%;
 	color: white;
 }
+@media all and (max-width: 474px) {
+	.breadcrumbs {
+		display: none;
+	}
+}
 
 .breadcrumbs li {
 	display: inline;
@@ -403,14 +408,54 @@ article {
 .advert a {
 	position: relative;
 	display: inline-block;
-	width: 615px;
-	height: 315px;
+
 }
 
 .advert img {
-	width: 615px;
-	height: 315px;
+
 }
+
+@media all and (min-width: 615px) {
+	.advert a,
+	.advert img {
+		width: 615px;
+		height: 315px;
+	}
+}
+
+@media all and (max-width: 614px) {
+	.advert a,
+	.advert img {
+		width: 100%;
+		height: auto;
+	}
+	
+	.advert span {
+		font-size: 1.3rem;
+		width: 
+	}
+	
+	.advert span:nth-child(1) {
+		top: 8px;
+	}
+	
+	.advert span:nth-child(3) {
+		top: 47.2%;
+	}
+	
+	.advert span:nth-child(5) {
+		bottom: 8px;
+		width: 200px;
+	}
+	
+	.tags {
+		display: none;
+	}
+}
+
+@media all and (max-width: 500px) { .advert span:nth-child(3){top: 47%;} }
+@media all and (max-width: 450px) { .advert span:nth-child(3){top: 46.5%;} }
+@media all and (max-width: 400px) { .advert span:nth-child(3){top: 45.5%;} }
 
 .advert a span {
 	position: absolute;
@@ -466,15 +511,15 @@ h1 {
 	display: inline-block;
 }
 
-@media all and (min-width: 1246px) {
+@media all and (min-width: 1246px){
 	.h1Background {
 		background: url(../img/site/h1background.jpg);
 	}
 }
 
-@media all and (max-width: 1246px) {
+@media all and (max-width: 1246px){ 
 	.h1Background {
-		background: url(../img/site/h1background-alternate.jpg);
+		background:url(../img/site/h1background-alternate.jpg);
 	}
 }
 
@@ -498,53 +543,18 @@ nav.visualMenu a {
 	position: relative;
 }
 
-nav.visualMenu a:nth-child(1) {
-	background: url(../img/site/visualmenu/clothes.jpg);
-}
-
-nav.visualMenu a:nth-child(2) {
-	background: url(../img/site/visualmenu/shoes.jpg);
-}
-
-nav.visualMenu a:nth-child(3) {
-	background: url(../img/site/visualmenu/cosmetics.jpg);
-}
-
-nav.visualMenu a:nth-child(4) {
-	background: url(../img/site/visualmenu/appliance.jpg);
-}
-
-nav.visualMenu a:nth-child(5) {
-	background: url(../img/site/visualmenu/phones.jpg);
-}
-
-nav.visualMenu a:nth-child(6) {
-	background: url(../img/site/visualmenu/audiovideo.jpg);
-}
-
-nav.visualMenu a:nth-child(7) {
-	background: url(../img/site/visualmenu/books.jpg);
-}
-
-nav.visualMenu a:nth-child(8) {
-	background: url(../img/site/visualmenu/health.jpg);
-}
-
-nav.visualMenu a:nth-child(9) {
-	background: url(../img/site/visualmenu/furniture.jpg);
-}
-
-nav.visualMenu a:nth-child(10) {
-	background: url(../img/site/visualmenu/kids.jpg);
-}
-
-nav.visualMenu a:nth-child(11) {
-	background: url(../img/site/visualmenu/gifts.jpg);
-}
-
-nav.visualMenu a:nth-child(12) {
-	background: url(../img/site/visualmenu/animals.jpg);
-}
+nav.visualMenu a:nth-child(1){background:url(../img/site/visualmenu/clothes.jpg);}
+nav.visualMenu a:nth-child(2){background:url(../img/site/visualmenu/shoes.jpg);}
+nav.visualMenu a:nth-child(3){background:url(../img/site/visualmenu/cosmetics.jpg);}
+nav.visualMenu a:nth-child(4){background:url(../img/site/visualmenu/appliance.jpg);}
+nav.visualMenu a:nth-child(5){background:url(../img/site/visualmenu/phones.jpg);}
+nav.visualMenu a:nth-child(6){background:url(../img/site/visualmenu/audiovideo.jpg);}
+nav.visualMenu a:nth-child(7){background:url(../img/site/visualmenu/books.jpg);}
+nav.visualMenu a:nth-child(8){background:url(../img/site/visualmenu/health.jpg);}
+nav.visualMenu a:nth-child(9){background:url(../img/site/visualmenu/furniture.jpg);}
+nav.visualMenu a:nth-child(10){background:url(../img/site/visualmenu/kids.jpg);}
+nav.visualMenu a:nth-child(11){background:url(../img/site/visualmenu/gifts.jpg);}
+nav.visualMenu a:nth-child(12){background: url(../img/site/visualmenu/animals.jpg);}
 
 .visualMenu a > span {
 	display: flex;
@@ -643,7 +653,6 @@ ul.brands li:nth-child(1) {
 	background: url(../img/site/ozon.jpg);
 }
 
-
 ul.brands li:nth-child(2) {
 	background: url(../img/site/mediamarkt.jpg);
 }
@@ -719,9 +728,10 @@ footer {
 	margin: 64px auto 40px;
 	text-align: center;
 	text-transform: uppercase;
-	width: 336px;
+	width: 410px;
 	padding-bottom: 2px;
 	border-bottom: 1px solid white;
+	font-size: 1.2rem;
 }
 
 .social ul {
@@ -737,4 +747,9 @@ footer {
 	border-radius: 50%;
 	box-sizing: border-box;
 	margin: auto 45px;
+}
+
+@media all and (max-width: 540px) {
+	.social span {font-size:1.1rem;width:270px;}
+	.social li {margin: auto 5px;}
 }
