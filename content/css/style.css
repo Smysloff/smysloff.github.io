@@ -485,19 +485,11 @@ h1 {
 	right: 25px;
 	top: 25px;
 	z-index: 2; 
+	background-color: rgba(255,255,255,0.7);
 }
 
-@media all and (max-width: 1246px) {
-	h1 {
-		left: 13%;
-	}
-}
-
-@media all and (max-width: 800px) {
-	h1 {
-		width: 260px;
-	}
-}
+@media all and (max-width: 1246px){h1{left:13%;}}
+@media all and (max-width: 800px){h1{width:260px;left:-15px;}}
 
 .h1Block {
 	height: 396px;
