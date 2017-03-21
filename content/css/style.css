@@ -490,17 +490,94 @@ nav.visualMenu {
 	justify-content: center;
 }
 
-nav.visualMenu .item {
+nav.visualMenu a {
+	display: table;
 	width: 410px;
 	height: 368px;
+	background: white;
+	position: relative;
 }
 
-nav.visualMenu .item:nth-child(odd) {
-	background: tomato;
+nav.visualMenu a:nth-child(1) {
+	background: url(../img/site/visualmenu/clothes.jpg);
 }
 
-nav.visualMenu .item:nth-child(even) {
-	background: gold;
+nav.visualMenu a:nth-child(2) {
+	background: url(../img/site/visualmenu/shoes.jpg);
+}
+
+nav.visualMenu a:nth-child(3) {
+	background: url(../img/site/visualmenu/cosmetics.jpg);
+}
+
+nav.visualMenu a:nth-child(4) {
+	background: url(../img/site/visualmenu/appliance.jpg);
+}
+
+nav.visualMenu a:nth-child(5) {
+	background: url(../img/site/visualmenu/phones.jpg);
+}
+
+nav.visualMenu a:nth-child(6) {
+	background: url(../img/site/visualmenu/audiovideo.jpg);
+}
+
+nav.visualMenu a:nth-child(7) {
+	background: url(../img/site/visualmenu/books.jpg);
+}
+
+nav.visualMenu a:nth-child(8) {
+	background: url(../img/site/visualmenu/health.jpg);
+}
+
+nav.visualMenu a:nth-child(9) {
+	background: url(../img/site/visualmenu/furniture.jpg);
+}
+
+nav.visualMenu a:nth-child(10) {
+	background: url(../img/site/visualmenu/kids.jpg);
+}
+
+nav.visualMenu a:nth-child(11) {
+	background: url(../img/site/visualmenu/gifts.jpg);
+}
+
+nav.visualMenu a:nth-child(12) {
+	background: url(../img/site/visualmenu/animals.jpg);
+}
+
+.visualMenu a > span {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: auto;
+	position: absolute;
+	bottom: 40px;
+	left:0;right:0;
+	z-index: 2;
+	width: 154px;
+	height: 54px;
+	text-transform: uppercase;
+	color: white;
+	font-size: 1.3rem;
+}
+
+.visualMenu a:after {
+	display: inline-block;
+	content: '';
+	width: 0; height: 0;
+	border-bottom: 205px solid black;
+	border-left: 205px solid transparent;
+	border-right: 205px solid transparent;
+	opacity: 0.7;
+	position: absolute;
+	bottom: 0;
+}
+
+.noWrap {
+	white-space: nowrap;
 }
 
 /* TAGS */
@@ -546,10 +623,6 @@ h3 {
 
 .rotator {
 	margin-top: 25px;
-}
-
-.rotator ul {
-	
 }
 
 .rotator li {
