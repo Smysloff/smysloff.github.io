@@ -719,6 +719,13 @@ ul.brands li:nth-child(6) {
 
 footer {
 	margin-top: 35px;
+	font-size: 1.15rem;
+	line-height: 2rem;
+}
+
+footer a {
+	color: white;
+	text-decoration: none;
 }
 
 /* SOCIAL */
@@ -819,27 +826,52 @@ footer {
 
 /* LINKS */
 
-.links {
-	width: 100%;
-	height: 500px;
-	background-color: black;
-	color: white;
-}
-
-.links span {
-	text-transform: uppercase;
-	display: block;
-	width: 90%;
-	border-bottom: 1px solid white;
-}
-
-.topline {
-	overflow: hidden;
-}
-
 .left {
 	width: 70%;
 	float: left;
+}
+
+.right {
+	width: 310px;
+	float: right;
+	text-align: right;
+}
+
+/* TopLine */
+
+.topLine {
+	margin-bottom: 36px;
+	padding-bottom: 36px;
+	overflow: hidden;
+	position: relative;
+}
+
+.topLine:after {
+	display: block;
+	content: '';
+	width: 80%;
+	margin: auto;
+	height: 2px;
+	background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0));
+	position: absolute;
+	right:10%; bottom:0; left:10%;
+}
+
+.links {
+	width: 100%;
+	background-color: black;
+	color: white;
+	padding-top: 40px;
+	padding-bottom: 15px;
+}
+
+.topLine .left span {
+	text-transform: uppercase;
+	display: block;
+	width: 90%;
+	height: 28px;
+	border-bottom: 1px solid white;
+	margin-bottom: 1rem;
 }
 
 .categories,
@@ -860,9 +892,101 @@ footer {
 	width: 50%;
 }
 
-.right {
-	width: 30%;
-	float: right;
-	text-align: right;
+.right span {
+	display: block;
+	height: 54px;
+	margin-bottom: 1.3rem;
 }
 
+footer form {
+	width: 310px;
+	height: 50px;
+	position: relative;
+}
+
+footer input[type="email"] {
+	width: 196px;
+	height: 50px;
+	padding-left: 20px;
+	padding-right: 94px;
+	font-size: 1.2rem;
+}
+
+footer input[type="submit"] {	
+	top: 7px;
+	right: 7px;
+	cursor: pointer;
+	z-index: 2;
+	opacity: 0;
+}
+
+footer input[type="submit"],
+footer form:before {
+	top: 7px;
+	right: 7px;
+	height: 36px;
+	width: 80px;
+	position: absolute;
+}
+
+footer form:before {
+	display: block;
+	content: '';
+	background: #333;
+}
+
+footer form:after {
+	display: block;
+	content: '';
+	position: absolute;	
+	border-top: 2px solid white;
+	border-right: 2px solid white;
+	top: 18px;
+    right: 42px;
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg);
+}
+
+/* BottomLine */
+
+.bottomLine {
+	overflow: hidden;
+	position: relative;
+}
+
+.bottomLine .left span {
+	font-size: 1rem;
+}
+
+
+.bottomLine .left span:after {
+	display: inline-block;
+	content: 'Все права защищены';
+}
+
+.bottomLine .left:after {
+	display: block;
+    content: 'Копирование материалов возможно только с письменного согласия администрации сайта';
+    font-size: 0.85rem;
+    line-height: 1.2rem;
+    width: 400px;
+}
+
+.bottomLine .right ul {
+	position: absolute;
+	bottom:0; right:0;
+	height: 47px;
+}
+
+.bottomLine .right li {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.bottomLine .right a {
+	display: block;
+	width: 47px;
+	height: 47px;
+	background: url(../img/site/liveinternet.jpg);
+}
