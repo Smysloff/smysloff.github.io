@@ -123,6 +123,13 @@ article {
 	border-bottom: 4px solid black;
 }
 
+@media all and (max-width: 370px) {
+	.greyLine .wrapper {
+		width: 100%;
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
 
 /* BREADCRUMBS */
 
@@ -214,6 +221,7 @@ article {
 /* LOGO */
 
 .logo {
+	display: block;
 	float: left;
 	margin-top: 33px;
 	background-color: black;
@@ -396,7 +404,7 @@ article {
 	display: inline-block;
 }
 
-@media all and (min-width: 615px) {
+@media all and (min-width: 631px) {
 	.advert a,
 	.advert img {
 		width: 615px;
@@ -404,18 +412,17 @@ article {
 	}
 }
 
-@media all and (max-width: 614px) {
+@media all and (max-width: 634px) {
 	.advert a,
 	.advert img {
 		width: 100%;
 		height: auto;
 	}
-	
+
 	.advert span {
 		font-size: 1.3rem;
-		width: 
 	}
-	
+
 	.advert span:nth-child(1){top: 8px;}
 	.advert span:nth-child(3){top: 47.2%;}
 	.advert span:nth-child(5){bottom: 8px; width: 200px;}
@@ -516,7 +523,7 @@ nav.visualMenu a:nth-child(8){background:url(../img/site/visualmenu/health.jpg);
 nav.visualMenu a:nth-child(9){background:url(../img/site/visualmenu/furniture.jpg);}
 nav.visualMenu a:nth-child(10){background:url(../img/site/visualmenu/kids.jpg);}
 nav.visualMenu a:nth-child(11){background:url(../img/site/visualmenu/gifts.jpg);}
-nav.visualMenu a:nth-child(12){background: url(../img/site/visualmenu/animals.jpg);}
+nav.visualMenu a:nth-child(12){background:url(../img/site/visualmenu/animals.jpg);}
 
 .visualMenu a > span {
 	display: flex;
@@ -552,7 +559,7 @@ nav.visualMenu a:nth-child(12){background: url(../img/site/visualmenu/animals.jp
 	white-space: nowrap;
 }
 
-@media all and (max-width: 410px) {
+@media all and (max-width: 430px) {
 	nav.visualMenu a {
 		width: 320px;
 		height: 287px;
@@ -561,6 +568,18 @@ nav.visualMenu a:nth-child(12){background: url(../img/site/visualmenu/animals.jp
 		border-bottom-width: 160px;
 		border-left-width: 160px;
 		border-right-width: 160px;
+	}
+}
+
+@media all and (max-width: 340px) {
+	nav.visualMenu a {
+		width: 300px;
+		height: 205px;
+	}
+	.visualMenu a:after{
+		border-bottom-width: 150px;
+		border-left-width: 150px;
+		border-right-width: 150px;
 	}
 }
 
@@ -912,6 +931,64 @@ footer form:after {
 	.topLine .right	{
 		width: 100%;
 	}
+	
+	.topLine .left span {
+		width: 100%;
+	}
+	
+	.topLine .right span {
+		width: 310px;
+		margin: 1.3rem auto;
+		text-align: center;
+	}
+
+	.topLine .right form {
+		margin: auto;
+	}
+	
+	.topLine .categories,
+	.topLine .info {
+		width: calc(50% - 12px);
+	}
+}
+
+@media all and (max-width: 760px) {
+	.topLine .categories,
+	.topLine .info {
+		width: calc(100% - 50px);
+		float: none;
+		margin: 0 auto 25px;
+	}
+}
+
+@media all and (max-width: 640px) {
+	.topLine .categories,
+	.topLine .info {
+		width: 100%;
+		float: none;
+		margin: 0 auto 25px;
+	}
+}
+
+@media all and (max-width: 640px) {
+	.topLine .categories li,
+	.topLine .info li {
+		font-size: 0.9rem;
+	}
+}
+
+@media all and (max-width: 384px) {
+	.topLine .left {
+		display: none;
+	}
+	.topLine .right span {
+		width: auto;
+		height: auto;
+		font-size: 1rem;
+	}
+	.topLine .right form {
+		width: 100%;
+	}
 }
 
 /* BottomLine */
@@ -924,7 +1001,6 @@ footer form:after {
 .bottomLine .left span {
 	font-size: 1rem;
 }
-
 
 .bottomLine .left span:after {
 	display: inline-block;
@@ -939,7 +1015,7 @@ footer form:after {
     width: 400px;
 }
 
-.bottomLine .right ul {
+.bottomLine .right {
 	position: absolute;
 	bottom:0; right:0;
 	height: 47px;
@@ -955,4 +1031,25 @@ footer form:after {
 	width: 47px;
 	height: 47px;
 	background: url(../img/site/liveinternet.jpg);
+}
+
+@media all and (max-width: 640px) {
+	
+	.bottomLine .left,
+	.bottomLine .right {
+		float: none;
+		width: 100%;
+		text-align: center;
+		position: static;
+	}
+	
+	.bottomLine .right {
+		margin: 0 auto 25px;
+	}
+	
+	.bottomLine .left:after {
+		margin: auto;
+		width: auto;
+		max-width: 360px;
+	}
 }
