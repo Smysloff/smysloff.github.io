@@ -85,7 +85,7 @@ noscript:before {
 
 .wrapper,
 article {
-	width: calc(100% - 50px); /* переделать используя padding! */
+	width: calc(100% - 50px);
 	max-width: 1180px;
 	margin: auto;
 	padding-left: 25px;
@@ -131,11 +131,8 @@ article {
 	width: 50%;
 	color: white;
 }
-@media all and (max-width: 474px) {
-	.breadcrumbs {
-		display: none;
-	}
-}
+
+@media all and (max-width: 474px) { .breadcrumbs{display:none;}}
 
 .breadcrumbs li {
 	display: inline;
@@ -274,7 +271,6 @@ article {
 }
 
 @media all and (max-width: 1246px) {
-
 	.mainMenu ul:after {
 		display: inline-block;
 		padding: 15px 20px;
@@ -286,12 +282,10 @@ article {
 		color: white;
 		background-color: black;
 		cursor: pointer;
-}
-
+	}
 	.mainMenu li {
 		display: none;
 	}
-
 }
 
 
@@ -393,26 +387,13 @@ article {
 	z-index: 2;
 }
 
-.advert span:nth-child(1) {
-	top: 28px;
-}
-
-.advert span:nth-child(3) {
-	top: 47%;
-}
-
-.advert span:nth-child(5) {
-	bottom: 28px;
-}
+.advert span:nth-child(1){top: 28px;}
+.advert span:nth-child(3){top: 47%;}
+.advert span:nth-child(5){bottom: 28px;}
 
 .advert a {
 	position: relative;
 	display: inline-block;
-
-}
-
-.advert img {
-
 }
 
 @media all and (min-width: 615px) {
@@ -435,18 +416,9 @@ article {
 		width: 
 	}
 	
-	.advert span:nth-child(1) {
-		top: 8px;
-	}
-	
-	.advert span:nth-child(3) {
-		top: 47.2%;
-	}
-	
-	.advert span:nth-child(5) {
-		bottom: 8px;
-		width: 200px;
-	}
+	.advert span:nth-child(1){top: 8px;}
+	.advert span:nth-child(3){top: 47.2%;}
+	.advert span:nth-child(5){bottom: 8px; width: 200px;}
 }
 
 @media all and (max-width: 500px) { .advert span:nth-child(3){top: 47%;} }
@@ -480,12 +452,14 @@ h1 {
 	position: absolute;
 	right: 25px;
 	top: 25px;
-	z-index: 2; 
-	background-color: rgba(255,255,255,0.7);
+	z-index: 2;
 }
 
-@media all and (max-width: 1246px){h1{left:13%;}}
-@media all and (max-width: 800px){h1{width:260px;left:-15px;}}
+@media all and (max-width: 1246px){h1{left:16%;}}
+@media all and (max-width: 940px){h1{left:6%;}}
+@media all and (max-width: 740px){h1{width:260px;left:5%;}}
+@media all and (max-width: 630px){h1{width:260px;left:0;top:20px;}}
+@media all and (max-width: 570px){h1{width:260px;left:-10px;top:10px;}}
 
 .h1Block {
 	height: 396px;
@@ -620,17 +594,27 @@ nav.tags {
 	cursor: pointer;
 }
 
-.tags li:last-child:before {
+.tags li:nth-last-child(2):after {
 	display: inline-block;
 	content: '';
-	width: 8%;
-	height: 100%;
-	position: absolute;
-	top:0;right:9%;
+	width: 50px;
+	height: 18px;
 	background: white;
 	background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1) 60%);
-	cursor: default;
-	z-index: 2;
+	position: absolute;
+	margin-left: -50px;
+}
+
+@media all and (max-width: 1250px) {
+	.tags ul {
+		text-align: center;
+		width: calc(100% - 50px);
+	}
+	.tags li {
+		display: inline-block;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
 }
 
 /* ARTICLE */
@@ -662,30 +646,6 @@ h3 {
 	width: 205px;
 	height: 150px;
 	background-color: white;
-}
-
-ul.brands li:nth-child(1) {
-	background: url(../img/site/ozon.jpg);
-}
-
-ul.brands li:nth-child(2) {
-	background: url(../img/site/mediamarkt.jpg);
-}
-
-ul.brands li:nth-child(3) {
-	background: url(../img/site/wildberries.jpg);
-}
-
-ul.brands li:nth-child(4) {
-	background: url(../img/site/mvideo.jpg);
-}
-
-ul.brands li:nth-child(5) {
-	background: url(../img/site/svyaznoy.jpg);
-}
-
-ul.brands li:nth-child(6) {
-	background: url(../img/site/lamoda.jpg);
 }
 
 .rotator ul.arrows {
@@ -732,7 +692,6 @@ footer a {
 
 .social {
 	width: 100%;
-	height: 270px;
 	background-color: #384150;
 }
 
@@ -760,7 +719,7 @@ footer a {
 	border: 5px solid white;
 	border-radius: 50%;
 	box-sizing: border-box;
-	margin: 0 45px 30px;
+	margin: 0 45px 60px;
 	position: relative;
 	box-shadow: 
 		1px 1px 1px 1px #1c2029,
@@ -820,7 +779,7 @@ footer a {
 
 @media all and (max-width: 540px) {
 	.social span {font-size:1.1rem;width:270px;}
-	.social li {margin: auto 5px;}
+	.social li {margin: auto 5px 60px;}
 }
 
 
@@ -946,6 +905,13 @@ footer form:after {
     width: 12px;
     height: 12px;
     transform: rotate(45deg);
+}
+
+@media all and (max-width: 1230px) {
+	.topLine .left,
+	.topLine .right	{
+		width: 100%;
+	}
 }
 
 /* BottomLine */
