@@ -700,11 +700,19 @@ h3 {
 .rotator .arrows li:first-child {
 	border-left: 2px solid #aaa;
 	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
 }
 
 .rotator .arrows li:last-child {
 	border-right: 2px solid #aaa;
 	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
 }
 
 /*********
@@ -1004,6 +1012,10 @@ footer form:after {
     	width: 12px;
     	height: 12px;
     	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
 }
 
 @media all and (max-width: 1230px) {
