@@ -62,31 +62,76 @@
 	</header>
 
 	<div class="main">
-		
+
 		<div class="slider">
-
 			<div class="imageItem">
-
 				<div class="container1">
-					<div class="container2">
-						<img class="pic" src="content/img/site/sliderImage1.jpg" alt="Девушка с покупками за ноутбуком">
-					</div>	
+						<div class="container2">
+							<img class="pic" src="content/img/site/sliderImage1.jpg" alt="Девушка с покупками за ноутбуком">
+							<img class="pic" src="content/img/site/sliderImage2.png" alt="Слайд2">
+							<img class="pic" src="content/img/site/sliderImage3.jpg" alt="Слайд3">
+							<img class="pic" src="content/img/site/sliderImage4.jpg" alt="Слайд4">
+							<img class="pic" src="content/img/site/sliderImage5.jpg" alt="Слайд5">
+						</div>
 				</div>
-
 				<img class="text" src="content/img/site/sliderText1.png" alt="С нами быстро, просто и выгодно">
-				
 			</div>
-
 			<ul>
-				<li class="active"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
+				<li class="demo" onclick="currentDiv(1)"></li>
+				<li class="demo" onclick="currentDiv(2)"></li>
+				<li class="demo" onclick="currentDiv(3)"></li>
+				<li class="demo" onclick="currentDiv(4)"></li>
+				<li class="demo" onclick="currentDiv(5)"></li>
 			</ul>
-
 		</div>
-			
+		<script type="text/javascript">
+			var slideIndex = 0;
+			showDivs(slideIndex);
+			carousel();
+
+			function plusDivs(n) {
+				showDivs(slideIndex += n);
+			}
+
+			function currentDiv(n) {
+				showDivs(slideIndex = n);
+			}
+
+			function showDivs(n) {
+				var i;
+				var x = document.getElementsByClassName("pic");
+				var dots = document.getElementsByClassName("demo");
+				if (n > x.length) {slideIndex = 1}    
+				if (n < 1) {slideIndex = x.length}
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				x[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " active";
+			}
+
+			function carousel() {
+				var i;
+				var x = document.getElementsByClassName("pic");
+				var dots = document.getElementsByClassName("demo");
+				for (i = 0; i < x.length; i++) {
+				  x[i].style.display = "none"; 
+				}
+				slideIndex++;
+				if (slideIndex > x.length) {slideIndex = 1} 
+				x[slideIndex-1].style.display = "block"; 
+				setTimeout(carousel, 6000);
+				
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+					}
+					x[slideIndex-1].style.display = "block";  
+					dots[slideIndex-1].className += " active";
+			}
+		</script>
 
 		<div class="advert">
 
@@ -177,18 +222,19 @@
 			<h3>Лучшие магазины месяца</h3>
 
 			<ul class="brands">
-				<li><img src="content/img/site/ozon.jpg" alt="ozon"></li>
-				<li><img src="content/img/site/mediamarkt.jpg" alt="mediamarkt"></li>
-				<li><img src="content/img/site/wildberries.jpg" alt="wildberries"></li>
-				<li><img src="content/img/site/mvideo.jpg" alt="mvideo"></li>
-				<li><img src="content/img/site/svyaznoy.jpg" alt="svyaznoy"></li>
-				<li><img src="content/img/site/lamoda.jpg" alt="lamoda"></li>
+				<li><img class="pic2" src="content/img/site/ozon.jpg" alt="ozon"></li>
+				<li><img class="pic2" src="content/img/site/mediamarkt.jpg" alt="mediamarkt"></li>
+				<li><img class="pic2" src="content/img/site/wildberries.jpg" alt="wildberries"></li>
+				<li><img class="pic2" src="content/img/site/mvideo.jpg" alt="mvideo"></li>
+				<li><img class="pic2" src="content/img/site/svyaznoy.jpg" alt="svyaznoy"></li>
+				<li><img class="pic2" src="content/img/site/lamoda.jpg" alt="lamoda"></li>
 			</ul>
-
+			
 			<ul class="arrows">
 				<li></li>
 				<li></li>
 			</ul>
+			
 		</section>
 		
 	</div>
