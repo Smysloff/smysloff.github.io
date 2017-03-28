@@ -7,9 +7,8 @@
 	<title>Рейтинг лучших интернет-магазинов России — AveMall.ru</title>
 	<meta name="description" content="Description для страницы">
 	<meta name="keywords" content="ключевые слова, через запятую">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="content/css/style.css">
-	<link rel="stylesheet" type="text/css" href="content/css/font-awesome.min.css">
 	<meta name="HandheldFriendly" content="true">
 
 </head>
@@ -42,12 +41,14 @@
 		<div class="greyLine">
 			<div class="wrapper">
 
-				<a href="index.html" class="logo">
+				<a href="index.html" class="logo" id="logo">
 					<img src="content/img/site/logo.jpg" alt="logo">
 				</a>
 
 				<nav class="mainMenu">
-					<ul>
+					<span class="open"></span>
+					<input type="checkbox" class="openCheckBox" value>
+					<ul id="sideBar">
 						<li class="active"><a href="#">Рейтинги</a></li>
 						<li><a href="#">Магазины</a></li>
 						<li><a href="#">Отзывы</a></li>
@@ -67,14 +68,14 @@
 			<div class="imageItem">
 				<div class="container1">
 						<div class="container2">
-							<img class="pic" src="content/img/site/sliderImage1.jpg" alt="Девушка с покупками за ноутбуком">
-							<img class="pic" src="content/img/site/sliderImage2.png" alt="Слайд2">
-							<img class="pic" src="content/img/site/sliderImage3.jpg" alt="Слайд3">
-							<img class="pic" src="content/img/site/sliderImage4.jpg" alt="Слайд4">
-							<img class="pic" src="content/img/site/sliderImage5.jpg" alt="Слайд5">
+							<img class="pic" src="content/img/site/slider/sliderImage1.jpg" alt="Девушка с покупками за ноутбуком">
+							<img class="pic" src="content/img/site/slider/sliderImage2.jpg" alt="Слайд2">
+							<img class="pic" src="content/img/site/slider/sliderImage3.jpg" alt="Слайд3">
+							<img class="pic" src="content/img/site/slider/sliderImage4.jpg" alt="Слайд4">
+							<img class="pic" src="content/img/site/slider/sliderImage5.jpg" alt="Слайд5">
 						</div>
 				</div>
-				<img class="text" src="content/img/site/sliderText1.png" alt="С нами быстро, просто и выгодно">
+				<img class="text" src="content/img/site/slider/sliderText1.png" alt="С нами быстро, просто и выгодно">
 			</div>
 			<ul>
 				<li class="demo" onclick="currentDiv(1)"></li>
@@ -84,54 +85,6 @@
 				<li class="demo" onclick="currentDiv(5)"></li>
 			</ul>
 		</div>
-		<script type="text/javascript">
-			var slideIndex = 0;
-			showDivs(slideIndex);
-			carousel();
-
-			function plusDivs(n) {
-				showDivs(slideIndex += n);
-			}
-
-			function currentDiv(n) {
-				showDivs(slideIndex = n);
-			}
-
-			function showDivs(n) {
-				var i;
-				var x = document.getElementsByClassName("pic");
-				var dots = document.getElementsByClassName("demo");
-				if (n > x.length) {slideIndex = 1}    
-				if (n < 1) {slideIndex = x.length}
-				for (i = 0; i < x.length; i++) {
-					x[i].style.display = "none";  
-				}
-				for (i = 0; i < dots.length; i++) {
-					dots[i].className = dots[i].className.replace(" active", "");
-				}
-				x[slideIndex-1].style.display = "block";  
-				dots[slideIndex-1].className += " active";
-			}
-
-			function carousel() {
-				var i;
-				var x = document.getElementsByClassName("pic");
-				var dots = document.getElementsByClassName("demo");
-				for (i = 0; i < x.length; i++) {
-				  x[i].style.display = "none"; 
-				}
-				slideIndex++;
-				if (slideIndex > x.length) {slideIndex = 1} 
-				x[slideIndex-1].style.display = "block"; 
-				setTimeout(carousel, 6000);
-				
-				for (i = 0; i < dots.length; i++) {
-					dots[i].className = dots[i].className.replace(" active", "");
-					}
-					x[slideIndex-1].style.display = "block";  
-					dots[slideIndex-1].className += " active";
-			}
-		</script>
 
 		<div class="advert">
 
@@ -314,6 +267,8 @@
 	</footer>
 
 	<noscript></noscript>
+	
+	<script type="text/javascript" src="content/js/scripts.js"></script>
 
 </body>
 
